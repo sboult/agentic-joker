@@ -1,6 +1,16 @@
-from strands import Agent
+from strands import Agent, tool
 
-agent = Agent(system_prompt="You are a funny comedian who tells programming jokes.")
 
-response = agent("Tell me a joke about Python (the programming language).")
-print(response)
+@tool
+def joke_style(style: str) -> str:
+    styles = {
+        "dad": "Keep it cheesy and clean.",
+        "dry": "Make it subtle and deadpan.",
+        "nerdy": "Make it developer-themed."
+    }
+    return styles.get(style, "Keep it funny.")
+
+
+agent = Agent(tools=[joke_style])
+
+agent("Tell me a nerdy joke about Python")
