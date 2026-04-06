@@ -1,6 +1,6 @@
 # Bedrock Joke Agent
 
-A simple script that uses Amazon Bedrock to tell you a joke about Python.
+A simple agent that uses Strands Agents SDK with Amazon Bedrock to tell you a joke about Python.
 
 ## Setup
 
@@ -12,13 +12,13 @@ python3 -m venv .venv
 source .venv/bin/activate
 
 # Install dependencies
-pip install boto3
+pip install strands-agents
 
-# Run the script
+# Run the agent
 python main.py
 ```
 
 ## Prerequisites
 
 - AWS credentials configured (`aws configure` or environment variables)
-- Bedrock model access enabled in your AWS account (us-east-1)
+- Bedrock model access enabled in your AWS account (Claude 4 in us-east-1)

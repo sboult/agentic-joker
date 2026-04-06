@@ -1,19 +1,6 @@
-import boto3
-import json
+from strands import Agent
 
-client = boto3.client("bedrock-runtime", region_name="us-east-1")
+agent = Agent(system_prompt="You are a funny comedian who tells programming jokes.")
 
-response = client.converse(
-    modelId="us.anthropic.claude-opus-4-6-v1",
-    messages=[
-        {
-            "role": "user",
-            "content": [
-                {"text": "Tell me a joke about Python (the programming language)."}
-            ],
-        }
-    ],
-    inferenceConfig={"maxTokens": 256},
-)
-
-print(response["output"]["message"]["content"][0]["text"])
+response = agent("Tell me a joke about Python (the programming language).")
+print(response)
