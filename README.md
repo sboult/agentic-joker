@@ -1,6 +1,8 @@
 # Bedrock Joke Agent
 
-A simple agent that uses Strands Agents SDK with Amazon Bedrock to tell you a joke about Python.
+> **⚠️ This is a sample repository for demonstration purposes only.** It is not intended for production use.
+
+A simple agent built with [Strands Agents SDK](https://github.com/strands-agents/sdk-python) and [Amazon Bedrock](https://aws.amazon.com/bedrock/) that tells you a joke about Python.
 
 ## Setup
 
