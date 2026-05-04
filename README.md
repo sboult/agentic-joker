@@ -2,25 +2,20 @@
 
 > **⚠️ This is a sample repository for demonstration purposes only.** It is not intended for production use.
 
-A simple agent built with [Strands Agents SDK](https://github.com/strands-agents/sdk-python) and [Amazon Bedrock](https://aws.amazon.com/bedrock/) that tells you a joke about Python.
+A simple agent built with [Strands Agents SDK](https://github.com/strands-agents/sdk-typescript) and [Amazon Bedrock](https://aws.amazon.com/bedrock/) that tells you a joke about Typescript.
 
 ## Setup
 
 ```bash
-# Create a virtual environment
-python3 -m venv .venv
-
-# Activate it
-source .venv/bin/activate
-
 # Install dependencies
-pip install strands-agents
+pnpm install
 
 # Run the agent
-python main.py
+pnpm start
 ```
 
 ## Prerequisites
 
 - AWS credentials configured (`aws configure` or environment variables)
 - Bedrock model access enabled in your AWS account (Claude 4 in us-east-1)
+- Node.js 22+
