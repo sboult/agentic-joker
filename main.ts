@@ -17,6 +17,9 @@ const jokeStyle = tool({
   },
 });
 
-const agent = new Agent({ tools: [jokeStyle] });
+const agent = new Agent({
+  systemPrompt: "You are a joke bot who tells a single joke",
+  tools: [jokeStyle]
+});
 
 await agent.invoke("Tell me a nerdy joke about Typescript");
